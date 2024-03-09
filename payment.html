@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Order Form</title>
+    <style>
+      header {
+        background-color: white; /* Set header background to white */
+        color: black; /* Set text color to black */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; /* Make the header fixed */
+        top: 0; /* Stick it to the top of the viewport */
+        width: 100%; /* Make it span the full width */
+        z-index: 999; /* Ensure it stays above other content */
+      }
+      header img {
+        height: 50px; /* Increase logo size */
+        margin-left: 20px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        margin-right: 20px;
+      }
+      nav ul li:last-child {
+        /* Add margin to the last child of the list */
+        margin-right: 40px;
+      }
+      nav ul li a {
+        color: black; /* Set menu item text color to black */
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+        color: red; /* Underline the link on hover */
+      }
+      .login-signup {
+        border: 2px solid red;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black; /* Set login/signup text color to black */
+        transition: color 0.3s; /* Add transition for smoother color change */
+      }
+      .login-signup:hover {
+        color: red; /* Change color to red on hover */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+      }
+
+      .left img {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .right {
+        flex: 1;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+
+      .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .form-container input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      .form-container select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      .form-container input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .form-container input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="login-signup">Login</a></li>
+          <li><a href="#" class="login-signup">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="left">
+        <img src="logo.png" alt="Food Image" />
+      </div>
+      <div class="right">
+        <div class="form-container">
+          <form action="#">
+            <label for="food_name" style="margin-top: 100px">Food Name:</label>
+            <input type="text" id="food_name" name="food_name" required />
+
+            <label for="restaurant_name">Restaurant Name:</label>
+            <input
+              type="text"
+              id="restaurant_name"
+              name="restaurant_name"
+              required
+            />
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required />
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required />
+
+            <label for="total_price">Total Price:</label>
+            <input
+              type="text"
+              id="total_price"
+              name="total_price"
+              required
+              readonly
+            />
+
+            <input type="submit" value="Place Order" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

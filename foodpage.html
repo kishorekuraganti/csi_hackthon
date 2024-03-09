@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Boxes</title>
+    <style>
+      header {
+        background-color: white; /* Set header background to white */
+        color: black; /* Set text color to black */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; /* Make the header fixed */
+        top: 0; /* Stick it to the top of the viewport */
+        width: 100%; /* Make it span the full width */
+        z-index: 999; /* Ensure it stays above other content */
+      }
+      header img {
+        height: 50px; /* Increase logo size */
+        margin-left: 20px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        margin-right: 20px;
+      }
+      nav ul li:last-child {
+        /* Add margin to the last child of the list */
+        margin-right: 40px;
+      }
+      nav ul li a {
+        color: black; /* Set menu item text color to black */
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+        color: red; /* Underline the link on hover */
+      }
+      .login-signup {
+        border: 2px solid red;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black; /* Set login/signup text color to black */
+        transition: color 0.3s; /* Add transition for smoother color change */
+      }
+      .login-signup:hover {
+        color: red; /* Change color to red on hover */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .box {
+        width: calc(33.33% - 20px);
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .box img {
+        width: 60%;
+        display: block;
+        margin: 10px auto;
+        border-radius: 8px;
+      }
+
+      .box .details {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .box .details h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333333;
+      }
+
+      .box .details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666666;
+      }
+      .con {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="login-signup">Login</a></li>
+          <li><a href="#" class="login-signup">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="con">
+      <h1 style="margin-left: 10px">Items Available</h1>
+      <div class="container">
+        <!-- Box 1 -->
+        <div class="box">
+          <img
+            src="WhatsApp Image 2024-03-10 at 01.03.00_d43f220e.jpg"
+            alt="Product 1"
+          />
+          <div class="details">
+            <h3>Rice</h3>
+            <p>Quantity: 10 kgs</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 0 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box">
+          <img
+            src="WhatsApp Image 2024-03-10 at 01.07.59_687d9aef.jpg"
+            alt="Product 2"
+          />
+          <div class="details">
+            <h3>Chapathi</h3>
+            <p>Quantity: 120</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 0 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+          <img src="meals.jpeg" alt="Product 3" />
+          <div class="details">
+            <h3>Meals</h3>
+            <p>Quantity: 30 plates</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 0 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="box">
+          <img src="biryani.jpeg" alt="Product 4" />
+          <div class="details">
+            <h3>Biryani</h3>
+            <p>Quantity: 10 kgs</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 50 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="box">
+          <img src="chicken.jpeg" alt="Product 5" />
+          <div class="details">
+            <h3>Chicken</h3>
+            <p>Quantity: 7 kgs</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 50 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="box">
+          <img src="biryani.jpeg" alt="Product 6" />
+          <div class="details">
+            <h3>Biryani</h3>
+            <p>Quantity: 2 kgs</p>
+            <p>Expiry Date: 31/12/2024</p>
+            <p>Price: 0 rs</p>
+            <a href="#">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
